@@ -1,42 +1,83 @@
 import React from 'react'
-import { ReactTyped } from "react-typed";
-
+import Navbar from '../components/Navbar';
+import { motion } from 'framer-motion';
+import { FaArrowRight } from "react-icons/fa";
 const Home = () => {
+
+  const rise={
+    initial : { opacity: 0, y: 40 },
+
+    animate : {
+       opacity: 1, y: 0 ,
+    transition : {
+       type: "tween", 
+       duration: 0.8 
+      },
+    }
+  }
   return (
     <>
+      <Navbar />
+      <div className="h-[86vh] -z-10  bg-red-100 bg-cover bg-center flex items-center "
+       style={{
+        backgroundImage:
+          "url('https://img.freepik.com/free-photo/kids-getting-back-school-together_23-2149507650.jpg?t=st=1734096708~exp=1734100308~hmac=4f03e9d49649b9285ad8670fa6604a70a6ebf60b402f48abcd9b3aafcc6d3a24&w=996')",
+        backgroundAttachment: "fixed", // Parallax background effect
+      }}>
+        <motion.div className=" bg-[#6229d3] h-[60vh] w-[42%] ml-20  p-4 pl-10 bg-opacity-95 flex justify-center flex-col"
+        variants={rise}
+        initial="initial"
+        animate="animate"
+>
+          <h1 className='text-white text-[70px] text-shadow-2xl font-normal'>Back to School</h1>
+          <div className='text-white text-[35px]'>Welcome to all of <br /> our students</div>
+          <motion.button className=' bg-gray-800 border-2 border-gray-800 shadow-lg mt-6 text-white p-2 w-40 hover:border-white hover:border-2'
+          whileHover={{scale:1.03}}>Discover More</motion.button>
+        </motion.div>
+        </div>
 
- <div className="flex justify-around h-[100vh] md:h-[90vh] items-center md:px-10 ">
+        <div className="h-[100vh] mx-10 flex justify-evenly items-center"> 
+        
+        <motion.div className="w-[25%] h-[65vh] border-b-2 border-blue-500 flex flex-col justify-between items-center "
+        initial={{opacity:0,y:60}}
+        whileInView={{opacity:1,y:0}}
+        transition={{type:"tween",delay:0.5,duration:1}}
+        >
+          <div className="h-[50%] w-[90%] ">
+            <img src="https://s3.ap-south-1.amazonaws.com/awsimages.imagesbazaar.com/900x600/16592/220-SM712587.jpg" alt="" />
+          </div>
+          <div className=" text-center  text-blue-500 font-semibold tracking-wider text-2xl ">Pre Kindergarten</div>
+          <div className="text-center font-light ">Counting objects, inside and outside, longer and shorter, letter names, rhyming words, and more.</div>
+          <button className=' bg-blue-500 text-white p-2 mb-6 flex justify-evenly items-center w-36 border-2 hover:bg-white hover:text-blue-500 hover:border-blue-500'>Learn More <FaArrowRight/></button>
+        </motion.div> 
 
-<div className="hidden md:block relative h-[70%] overflow-hidden w-[38%] rounded-lg  "
-  data-aos="fade-down-right"
-  data-aos-duration="800">
- <img src="https://img.freepik.com/free-vector/book-your-date-mobile-phone_23-2148552969.jpg?t=st=1728125286~exp=1728128886~hmac=2bd30d506bc7a6b715713b24c1f5a24287d4ea2b97b3cf5b860edb2daf16cccc&w=740" alt="" />
-</div>
-<div className="w-[90%] md:w-[50%] p-1 h-[90%] md:h-[360px] flex flex-col justify-between font-montserrat"
-  data-aos="fade-up-left"
-  data-aos-duration="800">
-  <div className=" text-[20px]  ">Welcome to ,</div>
-  <div className=" text-[45px]  ml-6 text-blue-900">Tickete</div>
-  <div className=" text-[25px]  "> Where you can Book &nbsp;
-    <span className="text-blue-800">
-        <ReactTyped
-        strings={["Event Tickets", "Concert Tickets", "and many more.."]}
-        typeSpeed={60}
-        loop
-        backSpeed={40}
-        showCursor={true}
-      /></span>
-  </div>
 
-  <div className="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias sequi possimus ea reiciendis voluptas corporis neque ipsa in quam, enim iusto sed est repellendus incidunt et praesentium sit odio alias officia perspiciatis </div>
-  <button
-    className="w-40 font-montserrat tracking-wider font-bold text-center uppercase  text-xs py-3 px-6 rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85]"
-    type="button">
-    Learn More
-  </button>
-</div>
 
-</div>
+        <motion.div className="w-[25%] h-[65vh] border-b-2 border-red-600 flex flex-col justify-between items-center "
+          initial={{opacity:0,y:60}}
+          whileInView={{opacity:1,y:0}}
+          transition={{type:"tween",delay:0.7,duration:1}}>
+          <div className="h-[50%] w-[90%] ">
+            <img src="https://s3.ap-south-1.amazonaws.com/awsimages.imagesbazaar.com/900x600/10094/20-SM273031.jpg" alt="" />
+          </div>
+          <div className=" text-center e text-red-600 font-semibold tracking-wider text-2xl "> Kindergarten</div>
+          <div className="text-center font-light ">Counting objects, inside and outside, longer and shorter, letter names, rhyming words, and more.</div>
+          <button className=' bg-red-600 text-white p-2 mb-6 flex justify-evenly items-center w-36
+          border-2 hover:bg-white hover:text-red-600 hover:border-red-600'>Learn More <FaArrowRight/></button>
+        </motion.div> 
+        <motion.div className="w-[25%] h-[65vh] border-b-2 border-orange-400 flex flex-col justify-between items-center "
+          initial={{opacity:0,y:60}}
+          whileInView={{opacity:1,y:0}}
+          transition={{type:"tween",delay:0.9,duration:1}}>
+          <div className="h-[50%] w-[90%] ">
+            <img src="https://s3.ap-south-1.amazonaws.com/awsimages.imagesbazaar.com/900x600/17070/15-SM743637.jpg" alt="" />
+          </div>
+          <div className=" text-center  text-orange-500 font-semibold tracking-wider text-2xl ">Elementary</div>
+          <div className="text-center font-light ">Counting objects, inside and outside, longer and shorter, letter names, rhyming words, and more.</div>
+         <button className=' bg-orange-500 border-2 text-white p-2 mb-6 flex justify-evenly items-center w-36 hover:bg-white hover:text-orange-500 hover:border-orange-500'>Learn More <FaArrowRight/></button>
+        </motion.div> 
+
+        </div>
 
     </>
   )
