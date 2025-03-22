@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
 import PhotoGallery from '../components/PhotoGallery';
+import DynamicHelmet from '../components/DynamicHelmet';
 
 const Gallery = () => {
     const rise = {
@@ -17,10 +18,14 @@ const Gallery = () => {
             },
         }
     }
+    useEffect(()=>{
+        window.scroll(0,0)
+       },[])
   return (
     <div className='bg-gray-100'>
+        <DynamicHelmet/>
         <Navbar/>
-        <motion.div className='flex flex-col justify-center items-center -z-10  md:h-[50vh]'
+        <motion.div className='flex flex-col justify-center items-center -z-10  md:h-[30vh]'
                 variants={rise}
                 initial="initial"
                 animate="animate">
@@ -34,23 +39,28 @@ const Gallery = () => {
             </motion.div>
 
 
-           <div className="h-[40vh] md:h-[80vh] p-4">
+           <div className="h-[40vh] md:h-[60vh] ">
             <Carousel/>
             </div> 
 
-            <div className="mx-4 md:mx-20 mt-10">
-                <div className=" text-[30px] font-normal uppercase tracking-wide">Annual Function</div>
+            <div className="mx-4 md:mx-20 mt-6">
+                <div className=" text-[40px] font-normal uppercase tracking-wide text-center">Annual Function</div>
+                <PhotoGallery/>
+            </div>
+            <div className="mx-4 md:mx-20 mt-6">
+                <div className=" text-[40px] font-normal uppercase tracking-wide text-center">Labs</div>
+                <PhotoGallery/>
+            </div>
+            <div className="mx-4 md:mx-20 mt-6">
+                <div className=" text-[40px] font-normal uppercase tracking-wide text-center">ClassRooms</div>
+                <PhotoGallery/>
+            </div>
+            <div className="mx-4 md:mx-20 mt-6">
+                <div className=" text-[40px] font-normal uppercase tracking-wide text-center">school</div>
                 <PhotoGallery/>
             </div>
 
-            <div className="mx-4 md:mx-20 mt-10">
-                <div className=" text-[30px] font-normal uppercase tracking-wide">Labs</div>
-                <PhotoGallery/>
-            </div>
-            <div className="mx-4 md:mx-20 mt-10">
-                <div className=" text-[30px] font-normal uppercase tracking-wide">Classroom</div>
-                <PhotoGallery/>
-            </div>
+            
 
 
     </div>

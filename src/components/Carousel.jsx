@@ -1,40 +1,73 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 
 const Carousel = () => {
-  const settings = {
-    dots: true, // Display navigation dots
-    infinite: true, // Loop the carousel
-    speed: 500, // Transition speed in ms
-    slidesToShow: 1, // Number of slides to show at once
-    slidesToScroll: 1, // Number of slides to scroll at once
-    autoplay: true, // Enable auto sliding
-    autoplaySpeed: 3000, // Auto sliding interval
-    arrows: true, // Show navigation arrows
-  };
-
   const images = [
-    "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?t=st=1734246548~exp=1734250148~hmac=509cc1ca4f15e331c4c1d428bee1cb529ee77c44c4a9e2a46455fedf72b6f531&w=996",
-    "https://img.freepik.com/free-photo/curious-kids-doing-chemical-experiment-school_23-2148990230.jpg?t=st=1734246613~exp=1734250213~hmac=b8850a776ef34cfb767a814736ad4cacc611fde56517b126f40cec81b04838e3&w=996",
-    "https://img.freepik.com/free-photo/kids-having-fun-playground_23-2149490409.jpg?t=st=1734246664~exp=1734250264~hmac=4ef80522ec057b13782441e618e1966a0e75c3a8867318d8afe5bfc006052c56&w=996",
-    "https://img.freepik.com/free-photo/teenagers-reading-books-around-table_23-2147864018.jpg?t=st=1734246711~exp=1734250311~hmac=2eb26ce759db9a7a32b5fc669e90084d2e1d15002f9127228e7179162434e93c&w=996",
+    {
+      url: "https://swiperjs.com/demos/images/nature-1.jpg",
+      alt: "Slide 1",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-2.jpg",
+      alt: "Slide 2",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-3.jpg",
+      alt: "Slide 3",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-4.jpg",
+      alt: "Slide 4",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-5.jpg",
+      alt: "Slide 5",
+    },
+    {
+      url: "https://swiperjs.com/demos/images/nature-6.jpg",
+      alt: "Slide 6",
+    },
   ];
 
   return (
-    <div className="  w-[90%]  mx-4 md:mx-16 " >
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index} className="flex justify-center items-center rounded-lg   ">
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="rounded-lg w-[100%]  md:h-[80vh] object-scale-down"
-            />
-          </div>
-        ))}
-      </Slider>
+    <div className="relative flex flex-col items-center justify-center py-2 md:py-4">
+      <div className="relative h-[40vh] md:h-[50vh] text-black text-sm font-sans m-0 p-0 flex flex-col items-center justify-center">
+        <div className="swiper w-full pt-[50px] pb-[50px]">
+          <Swiper
+            loop={true}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView="auto"
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={true}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
+            className="mySwiper"
+          >
+            {images.map((image, index) => (
+              <SwiperSlide
+                key={index}
+                className="swiper-slide bg-center bg-cover w-[40%] md:w-[30%] md:h-[300px]"
+              >
+                <img src={image.url} alt={image.alt} className="block w-full" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
     </div>
   );
 };

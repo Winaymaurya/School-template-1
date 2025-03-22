@@ -14,6 +14,8 @@ import Student from './pages/Student'
 import Event from './pages/Event'
 import Gallery from './pages/Gallery'
 import Footer from './components/Footer'
+import PageNotFound from './pages/PageNotFound'
+import Faculity from './pages/Faculity'
 // import PageNotFound from './pages/PageNotFound'
 function App() {
  
@@ -44,8 +46,14 @@ function App() {
         <Route path={'/Gallery'} element={
           <Gallery/>
           }/>
+        <Route path={'/Facilities'} element={
+          <Faculity/>
+          }/>
         <Route path={'/Academics'} element={
           <Academics/>
+          }/>
+        <Route path={'/*'} element={
+          <PageNotFound/>
           }/>
      
     </Routes>

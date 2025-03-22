@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="flex justify-between items-end p-[14px] px-10 sticky top-0 bg-gray-200 z-20">
         <div className=""><FaSchool size={36}/></div>
              
-             <div className="text-xl uppercase font-semibold font-montserrat my-1"> School Academy</div>
+             <div className="text-xl uppercase font-semibold font-montserrat my-1 text-center"> New Horizon Academy</div>
           <ul className=" hidden md:flex  space-x-4 ">
             <li className="bg-gray-300 h-10 w-10 rounded-full flex items-center justify-center ">
               <FaFacebookF className='text-blue-600 hover:scale-110' size={20} />
@@ -43,7 +43,7 @@ const Navbar = () => {
        
           </div>
       
-      <div className=' p-2 tracking-wide text-md  font-montserrat font-light  bg-gray-800 text-white sticky top-16 z-50 w-[100%] h-10'>
+      <div className='py-3 p-2 tracking-wide text-md  font-montserrat font-light  bg-gray-800 text-white sticky top-16 z-50 w-[100%] h-12'>
         <div className="  px-40 hidden md:flex justify-between">
           <div className="">
             <NavLink to='/' className={({ isActive }) =>
@@ -74,6 +74,11 @@ const Navbar = () => {
             <NavLink to='/Admission' className={({ isActive }) =>
               isActive ? 'text-purple-300 p-1 hover:text-purple-300' : 'text-white p-1 hover:text-purple-300'
             }>Admissions</NavLink>
+          </div>
+          <div className="">
+            <NavLink to='/Facilities' className={({ isActive }) =>
+              isActive ? 'text-purple-300 p-1 hover:text-purple-300' : 'text-white p-1 hover:text-purple-300'
+            }>Facilities</NavLink>
           </div>
           <div className="">
             <NavLink to='/Gallery' className={({ isActive }) =>
@@ -136,6 +141,11 @@ const Navbar = () => {
           <NavLink to='/Admission' className={({ isActive }) =>
             isActive ? 'text-purple-300 p-1 hover:text-purple-300' : 'text-white p-1 hover:text-purple-300'
           }>Admissions</NavLink>
+        </div>
+        <div className="">
+          <NavLink to='/Facilities' className={({ isActive }) =>
+            isActive ? 'text-purple-300 p-1 hover:text-purple-300' : 'text-white p-1 hover:text-purple-300'
+          }>Facilities</NavLink>
         </div>
         <div className="">
           <NavLink to='/Gallery' className={({ isActive }) =>
