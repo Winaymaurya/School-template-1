@@ -24,24 +24,24 @@ const Home = () => {
           "url('https://img.freepik.com/free-photo/kids-getting-back-school-together_23-2149507650.jpg?t=st=1734096708~exp=1734100308~hmac=4f03e9d49649b9285ad8670fa6604a70a6ebf60b402f48abcd9b3aafcc6d3a24&w=996')",
         backgroundAttachment: "fixed", // Parallax background effect
       }}>
-        <motion.div className=" bg-[#6229d3] h-[60vh] w-[42%] ml-20  p-4 pl-10 bg-opacity-95 flex justify-center flex-col"
+        <motion.div className=" bg-[#6229d3] h-[50vh] md:h-[60vh] w-[90%] md:w-[42%] ml-4 md:ml-20  p-4 md:pl-10 bg-opacity-95 flex justify-center flex-col"
         variants={rise}
         initial="initial"
         animate="animate"
 >
-          <h1 className='text-white text-[70px] text-shadow-2xl font-normal'>Back to School</h1>
+          <h1 className='text-white text-[42px] md:text-[70px] text-shadow-2xl font-normal'>Back to School</h1>
           <div className='text-white text-[35px]'>Welcome to all of <br /> our students</div>
           <motion.button className=' bg-gray-800 border-2 border-gray-800 shadow-lg mt-6 text-white p-2 w-40 hover:border-white hover:border-2'
           whileHover={{scale:1.03}}>Discover More</motion.button>
         </motion.div>
         </div>
 
-        <div className="h-[100vh] mx-10 flex justify-evenly items-center"> 
+        <div className="min-h-[100vh] mx-10 flex flex-col md:flex-row justify-evenly items-center"> 
         
-        <motion.div className="w-[25%] h-[65vh] border-b-2 border-blue-500 flex flex-col justify-between items-center "
+        <motion.div className=" my-8  md:w-[25%] h-[50vh] md:h-[65vh] border-b-2 border-blue-500 flex flex-col justify-between items-center "
         initial={{opacity:0,y:60}}
         whileInView={{opacity:1,y:0}}
-        transition={{type:"tween",delay:0.5,duration:1}}
+        transition={{type:"tween",delay:0.1,duration:1}}
         >
           <div className="h-[50%] w-[90%] ">
             <img src="https://s3.ap-south-1.amazonaws.com/awsimages.imagesbazaar.com/900x600/16592/220-SM712587.jpg" alt="" />
@@ -53,10 +53,10 @@ const Home = () => {
 
 
 
-        <motion.div className="w-[25%] h-[65vh] border-b-2 border-red-600 flex flex-col justify-between items-center "
+        <motion.div className="my-8  md:w-[25%] h-[50vh] md:h-[65vh] border-b-2 border-red-600 flex flex-col justify-between items-center "
           initial={{opacity:0,y:60}}
           whileInView={{opacity:1,y:0}}
-          transition={{type:"tween",delay:0.7,duration:1}}>
+          transition={{type:"tween",delay:0.3,duration:1}}>
           <div className="h-[50%] w-[90%] ">
             <img src="https://s3.ap-south-1.amazonaws.com/awsimages.imagesbazaar.com/900x600/10094/20-SM273031.jpg" alt="" />
           </div>
@@ -65,10 +65,10 @@ const Home = () => {
           <button className=' bg-red-600 text-white p-2 mb-6 flex justify-evenly items-center w-36
           border-2 hover:bg-white hover:text-red-600 hover:border-red-600'>Learn More <FaArrowRight/></button>
         </motion.div> 
-        <motion.div className="w-[25%] h-[65vh] border-b-2 border-orange-400 flex flex-col justify-between items-center "
+        <motion.div className="my-8  md:w-[25%] h-[50vh] md:h-[65vh] border-b-2 border-orange-400 flex flex-col justify-between items-center "
           initial={{opacity:0,y:60}}
           whileInView={{opacity:1,y:0}}
-          transition={{type:"tween",delay:0.9,duration:1}}>
+          transition={{type:"tween",delay:0.5,duration:1}}>
           <div className="h-[50%] w-[90%] ">
             <img src="https://s3.ap-south-1.amazonaws.com/awsimages.imagesbazaar.com/900x600/17070/15-SM743637.jpg" alt="" />
           </div>

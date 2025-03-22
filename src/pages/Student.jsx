@@ -51,30 +51,30 @@ const Student = () => {
     <>
     <Navbar/>
   
-    <motion.div className='flex flex-col justify-center items-center -z-10  h-[50vh]'
+    <motion.div className='flex flex-col justify-center items-center -z-10  md:h-[50vh]'
                 variants={rise}
                 initial="initial"
                 animate="animate">
-                <div className="text-[70px] uppercase font-normal text-center mt-6"
+                <div className="text-[50px] md:text-[70px] uppercase mx-4 font-normal text-center mt-6"
                 > Our Students
                 </div>
-                <div className="text-[20px] font-extralight text-center mt-2  w-[50%]"
+                <div className="text-[15px] md:text-[20px] font-extralight text-center mt-2 w-[90%]  md:w-[50%]"
                 > I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
                 </div>
 
             </motion.div>
 
-     <div className="mx-20">
+     <div className=" mx-4 md:mx-20 mt-10 md:mt-0">
       <div className="text-3xl uppercase tracking-wide"> Our Toppers -</div>
       <div className=" flex justify-evenly flex-wrap">
 
 {students.map((t, index) => (
-  <motion.div className="w-[20%] m-4 cursor-pointer bg-gray-100 p-2 rounded-lg" key={index}
+  <motion.div className="w-[40%] md:w-[20%] m-4 cursor-pointer bg-gray-100 p-2 rounded-lg" key={index}
   initial={{opacity:0,y:60}}
   whileInView={{opacity:1,y:0}}
   transition={{duration:0.3,once:true,type:'tween',delay:index*.3}}
   whileHover={{scale:0.96,opacity:0.95}}>
-    <div className="h-40 w-full flex justify-center items-center " >
+    <div className="h-32 md:h-44 w-full flex justify-center items-center " >
       <img
         src={t.img}
         className="h-full w-40 object-cover object-top rounded-lg"
@@ -82,7 +82,7 @@ const Student = () => {
       />
     </div>
     <div className="font-semibold font-montserrat flex justify-evenly flex-col items-center my-2">
-      <div className="text-xl text-blue-900">{t.name}</div>
+      <div className="text-md md:text-xl text-blue-900 text-center">{t.name}</div>
       <div className="text-blue-900">Class : {t.class}</div>
       <div className="font-medium ">{t.mark}</div>
     </div>

@@ -61,14 +61,14 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <motion.div className='flex flex-col justify-center items-center -z-10  h-[50vh]'
+      <motion.div className='flex flex-col justify-center items-center -z-10  md:h-[50vh]'
         variants={rise}
         initial="initial"
         animate="animate">
-        <div className="text-[70px] font-normal text-center mt-6"
+        <div className="text-[50px] md:text-[70px] font-normal text-center mt-6"
         > OUR SCHOOL
         </div>
-        <div className="text-[20px] font-extralight text-center mt-2  w-[50%]"
+        <div className="text-[15px] md:text-[20px] font-extralight text-center mt-2 w-[90%] md:w-[50%]"
         > I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
         </div>
 
@@ -76,22 +76,22 @@ const About = () => {
 
 
       {/* PRincipal */}
-      <div className="h-[75vh] bg-gray-200 mt-10 flex items-center justify-center">
-        <div className="w-[40%] h-[75vh]">
+      <div className="min-h-[75vh] bg-gray-200 mt-10 flex flex-col md:flex-row items-center justify-center">
+        <div className="w-[90%] md:w-[40%] h-[40vh] md:h-[75vh]">
           <img
             src="https://img.freepik.com/free-photo/smiling-business-man-sitting-empty-office-desk_1262-5631.jpg?t=st=1734153319~exp=1734156919~hmac=33fb2b74fc5aad587b40a73f319950fbe5c1207ce8f0e3c5c11d53dd7e592673&w=360"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
 
-        <div className="w-[40%] h-[75vh] bg-gray-800 px-10 flex flex-col justify-center">
-          <div className="text-[40px] tracking-wide text-blue-300 mb-12">
+        <div className="w-[90%] md:w-[40%]  md:h-[75vh] bg-gray-800 px-10 flex flex-col justify-center">
+          <div className=" text-[35px] md:text-[40px] tracking-wide text-blue-300 md:mb-12">
             Principal's Message
           </div>
           <motion.div
             ref={principalRef}
-            className="text-white text-lg tracking-wide font-light flex justify-between flex-col h-[40vh]"
+            className="text-white text-sm md:text-lg tracking-wide font-light flex justify-around flex-col   h-[35vh]    md:h-[40vh]"
             variants={rise}
             initial="initial"
             animate={isPrincipalInView ? "animate" : ""}
@@ -111,22 +111,22 @@ const About = () => {
       </div>
 
       {/* Manager's Message */}
-      <div className="h-[75vh] bg-gray-200 flex flex-row-reverse items-center justify-center">
-        <div className="w-[40%] h-[75vh]">
+      <div className="min-h-[75vh] bg-gray-200 mt-10 flex flex-col md:flex-row-reverse items-center justify-center">
+        <div className="w-[90%] md:w-[40%] h-[40vh] md:h-[75vh]">
           <img
             src="https://img.freepik.com/free-photo/smiling-business-man-sitting-empty-office-desk_1262-5631.jpg?t=st=1734153319~exp=1734156919~hmac=33fb2b74fc5aad587b40a73f319950fbe5c1207ce8f0e3c5c11d53dd7e592673&w=360"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
 
-        <div className="w-[40%] h-[75vh] bg-gray-800 px-10 flex flex-col justify-center">
-          <div className="text-[40px] tracking-wide text-blue-300 mb-12">
+        <div className="w-[90%] md:w-[40%]  md:h-[75vh] bg-gray-800 px-10 flex flex-col justify-center">
+          <div className=" text-[35px] md:text-[40px] tracking-wide text-blue-300 md:mb-12">
             Manager's Message
           </div>
           <motion.div
             ref={managerRef}
-            className="text-white text-lg tracking-wide font-light flex justify-between flex-col h-[40vh]"
+            className="text-white text-sm md:text-lg tracking-wide font-light flex justify-around flex-col   h-[35vh]    md:h-[40vh]"
             variants={rise}
             initial="initial"
             animate={isManagerInView ? "animate" : ""}
@@ -146,25 +146,24 @@ const About = () => {
       </div>
 
       {/* Founder */}
-      <div className="h-[75vh] bg-gray-200  flex items-center justify-center">
-        <div className="w-[40%] h-[75vh]">
+      <div className="min-h-[75vh] bg-gray-200 mt-10 flex flex-col md:flex-row items-center justify-center">
+        <div className="w-[90%] md:w-[40%] h-[40vh] md:h-[75vh]">
           <img
             src="https://img.freepik.com/free-photo/smiling-business-man-sitting-empty-office-desk_1262-5631.jpg?t=st=1734153319~exp=1734156919~hmac=33fb2b74fc5aad587b40a73f319950fbe5c1207ce8f0e3c5c11d53dd7e592673&w=360"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
 
-        <div className="w-[40%] h-[75vh] bg-gray-800 px-10 flex flex-col justify-center">
-          <div className="text-[40px] tracking-wide text-blue-300 mb-12">
-            Founder's Message
+        <div className="w-[90%] md:w-[40%]  md:h-[75vh] bg-gray-800 px-10 flex flex-col justify-center">
+          <div className="text-[35px] md:text-[40px] tracking-wide text-blue-300 md:mb-12 ">
+           Founder's Message
           </div>
           <motion.div
-
-            className="text-white text-lg tracking-wide font-light flex justify-between flex-col h-[40vh]"
+            className="text-white text-sm md:text-lg tracking-wide font-light flex justify-around flex-col   h-[35vh]    md:h-[40vh]"
             variants={rise}
             initial="initial"
-            animate="animate"
+            animate= "animate" 
           >
             <div>
               I'm a paragraph. Click here to add your own text and edit me. It’s
@@ -183,14 +182,14 @@ const About = () => {
 
 
 
-      <motion.div className='flex flex-col justify-center items-center -z-10  h-[50vh]'
+      <motion.div className='flex flex-col justify-center items-center -z-10  h-[50vh] '
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4,once:true, type: "tween", delay: 0.6 }}>
-        <div className="text-[70px] font-normal text-center mt-6"
+        <div className=" text-[50px] md:text-[70px] font-normal text-center mt-6"
         > STAFF DIRECTORY
         </div>
-        <div className="text-[20px] font-extralight text-center mt-2  w-[50%]"
+        <div className=" text-[15px] md:text-[20px] font-extralight text-center mt-2 w-[90%] md:w-[50%]"
         > I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
         </div>
 
@@ -200,12 +199,12 @@ const About = () => {
       <div className=" flex justify-evenly flex-wrap">
 
         {teacher.map((t, index) => (
-          <motion.div className="w-[20%] mx-10 my-4 cursor-pointer" key={index}
+          <motion.div className="w-[40%] md:w-[20%] mx-2 md:mx-10 my-4 cursor-pointer" key={index}
           initial={{opacity:0,y:40}}
           whileInView={{opacity:1,y:0}}
           transition={{duration:0.3,once:true,type:'tween',delay:index*.2}}
           whileHover={{scale:0.96,opacity:0.95}}>
-            <div className="h-60">
+            <div className="h-40 md:h-60">
               <img
                 src={t.img}
                 className="h-full w-full object-cover object-top"
@@ -213,8 +212,8 @@ const About = () => {
               />
             </div>
             <div className="font-semibold font-montserrat">
-              <div className="text-blue-900">{t.position}</div>
-              <div className="text-xl text-blue-900">{t.name}</div>
+              <div className=" text-sm md:text-md text-blue-900">{t.position}</div>
+              <div className="text-md md:text-xl text-blue-900">{t.name}</div>
               <div className="font-medium underline">{t.contact}</div>
             </div>
           </motion.div>

@@ -23,7 +23,7 @@ const Contact = () => {
       animate: {
         opacity: 1,
         y: 0,
-        transition: { type: "tween", duration: 0.9, delay: 0.3 },
+        transition: { type: "tween", duration: 0.9 },
       },
     };
   
@@ -34,41 +34,41 @@ const Contact = () => {
     
     <>
     <Navbar/>
-    <motion.div className='flex flex-col justify-center items-center -z-10  h-[50vh]'
+    <motion.div className='flex flex-col justify-center items-center -z-10  md:h-[50vh]'
                 variants={rise}
                 initial="initial"
                 animate="animate">
-                <div className="text-[70px] uppercase font-normal text-center mt-6"
+                <div className="text-[50px] md:text-[70px] uppercase font-normal text-center mt-6"
                 > Contact Us
                 </div>
-                <div className="text-[20px] font-extralight text-center mt-2  w-[50%]"
+                <div className="text-[15px] md:text-[20px] font-extralight text-center mt-2 w-[90%] md:w-[50%]"
                 > I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
                 </div>
 
             </motion.div>
 
-            <div className="h-[86vh] -z-10  bg-red-100 bg-cover bg-top flex items-center "
+            <div className="h-[86vh] -z-10  bg-red-100 bg-cover bg-top flex items-center mt-10"
        style={{
         backgroundImage:
           "url('https://s3.ap-south-1.amazonaws.com/awsimages.imagesbazaar.com/900x600/5940/20-SM150261.jpg')",
         backgroundAttachment: "fixed", // Parallax background effect
       }}>
-        <div className="bg-[#3a1696] text-white w-full h-[50vh] mx-10 p-4">
-           <div className="text-[40px] tracking-wider uppercase">Visit the School-</div>
-           <motion.div className=" flex justify-evenly h-[35vh] items-center "
+        <div className="bg-[#3a1696] text-white w-full h-[50vh] mx-5 md:mx-10 p-4">
+           <div className="text-[27px] md:text-[40px] tracking-wider uppercase">Visit the School-</div>
+           <motion.div className=" flex justify-evenly flex-col md:flex-row h-[35vh] items-center "
            initial={{opacity:0,y:50}}
            whileInView={{opacity:1,y:0}}
            transition={{duration:0.8,type:"tween",delay:0.8}}>
-           <div className=" ">
-            <div className="uppercase tracking-wider text-2xl mb-4">Address </div>
-            <div className="m-2 space-y-2">
+           <div className=" w-60">
+            <div className="uppercase tracking-wider text-lg md:text-2xl mb-4 ">Address </div>
+            <div className="md:m-2 space-y-2 text-sm md:text-md">
               <div>500 Terry Francine Street</div>
               <div>San Francisco, CA 94158</div>
             </div>
            </div>
-           <div className=" ">
-            <div className="uppercase tracking-wider text-2xl mb-4">Office hours </div>
-            <div className="m-2 space-y-2">
+           <div className=" w-60 ">
+            <div className="uppercase tracking-wider text-lg md:text-2xl mb-4">Office hours </div>
+            <div className="md:m-2 space-y-2 text-sm md:text-md ">
               <div>Summer : 8:00 AM - 2:00 PM</div>
               <div>Winter : 9:00 AM - 3:00 PM</div>
 
@@ -83,10 +83,9 @@ const Contact = () => {
 
       <div className=" mt-20 grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto max-w-4xl bg-white font-[sans-serif]">
   <motion.div 
-  ref={ref}
-  variants={rise2}
+  variants={rise}
   initial="initial"
-  animate={isInView ? "animate" : "initial"}>
+  animate= "animate" >
     <h1 className="text-gray-800 text-3xl tracking-wide uppercase"
     >Let's Talk</h1>
     <p className="text-sm text-gray-500 mt-4">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project  and provide help.</p>
@@ -144,6 +143,13 @@ const Contact = () => {
     <button type="button" className="text-white bg-[#5f36c6] hover:bg-[#4c25ae] rounded-md text-sm px-4 py-3 w-full !mt-6 uppercase tracking-wider">Send</button>
   </motion.form>
 </div>
+  <div className='my-6 mx-6 md:mx-16  w-[90%]'>
+      <div className="text-xl text-center font-montserrat mb-6"> <span className='text-3xl'> School Academy</span> <span className=''>, Mohmadabad Ghazipur </span> </div>
+      <div className="p-4 px-12">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3597.6347080929017!2d83.75097507453692!3d25.617051977443133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM3JzAxLjQiTiA4M8KwNDUnMTIuOCJF!5e0!3m2!1sen!2sin!4v1729056453000!5m2!1sen!2sin" width="100%" height="400"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
 
     </>
   )

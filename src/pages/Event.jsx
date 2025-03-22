@@ -48,20 +48,20 @@ const Event = () => {
         <>
             <Navbar />
 
-            <motion.div className='flex flex-col justify-center items-center -z-10  h-[50vh]'
+            <motion.div className='flex flex-col justify-center items-center -z-10  md:h-[50vh]'
                 variants={rise}
                 initial="initial"
                 animate="animate">
-                <div className="text-[70px] uppercase font-normal text-center mt-6"
+                <div className="text-[50px] md:text-[70px] uppercase font-normal text-center mt-6"
                 > School Events
                 </div>
-                <div className="text-[20px] font-extralight text-center mt-2  w-[50%]"
+                <div className="text-[15px] md:text-[20px] font-extralight text-center mt-2 w-[90%] md:w-[50%]"
                 > I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
                 </div>
 
             </motion.div>
 
-            <div className="mx-32 mb-10">
+            <div className="mx-4 md:mx-32 my-10">
             {events.map((c, index) => (
         <Accordion
           key={index}
@@ -75,8 +75,8 @@ const Event = () => {
           >
             <div className="flex justify-between w-full items-center">
               <div>
-                <div className="text-xl">{c.date}</div>
-                <div className="text-[45px] tracking-wide font-montserrat">
+                <div className="text-xm md:text-xl">{c.date}</div>
+                <div className="text-[25px] md:text-[45px] tracking-wide font-montserrat">
                   {c.title}
                 </div>
               </div>

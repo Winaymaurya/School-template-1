@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoCall } from "react-icons/io5";
 import { MdMail } from "react-icons/md";
+import { FaSchool } from "react-icons/fa6";
 import { motion, useInView } from "framer-motion";
 
 const Footer = () => {
@@ -23,14 +24,18 @@ const Footer = () => {
   const isInView = useInView(ref,{amount:0.5});
 
   return (
+    <>
+    
     <div
       ref={ref}
-      className="bg-gray-800 flex justify-around py-16 items-start mt-10"
+      className="bg-gray-800 flex md:flex-row flex-col justify-around py-10 md:py-16  md:items-start items-center mt-10  
+      h-[75vh] md:h-auto overflow-y-auto md:overflow-visible
+       "
     >
-      <div className="text-white text-[40px]">Logo</div>
-      <div>
+      <div className="text-white md:block  flex md:space-x-0 space-x-4 text-[30px]  md:text-[40px] mb-4"> <FaSchool/> <div className="text-xl uppercase font-semibold font-montserrat my-1"> School Academy</div> </div>
+      <div className=" w-[70%] md:w-auto mb-8 md:mb-0 ">
         <motion.div
-          className="uppercase text-purple-200 tracking-wider text-xl mb-4 font-light"
+          className="uppercase text-purple-200 tracking-wider text-xl mb-4 font-light text-center"
           variants={rise}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
@@ -38,7 +43,7 @@ const Footer = () => {
           Quick Navigation
         </motion.div>
         <motion.div
-          className="flex justify-between text-white font-light tracking-wider"
+          className="flex justify-between text-white font-light tracking-wider  "
           variants={rise2}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
@@ -57,7 +62,7 @@ const Footer = () => {
               Academics
             </Link>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col text-right">
             <Link to={"/Student"} className="my-2 mr-2">
               Students
             </Link>
@@ -73,9 +78,9 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
-      <div>
+      <div className="w-[70%] md:w-auto mb-8 md:mb-0 ">
         <motion.div
-          className="uppercase text-purple-200 tracking-wider mb-4 text-xl font-light"
+          className="uppercase text-purple-200 tracking-wider mb-4 text-xl font-light text-center"
           variants={rise}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
@@ -83,7 +88,7 @@ const Footer = () => {
           Stay Connected
         </motion.div>
         <motion.div
-          className="flex flex-col text-white font-light tracking-wider"
+          className="flex flex-col text-white font-light tracking-wider md:text-left text-center"
           variants={rise2}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
@@ -102,9 +107,9 @@ const Footer = () => {
           </Link>
         </motion.div>
       </div>
-      <div>
+      <div className="w-[70%] md:w-auto mb-8 md:mb-0 ">
         <motion.div
-          className="uppercase text-purple-200 tracking-wider mb-4 text-xl font-light"
+          className="uppercase text-purple-200 tracking-wider mb-4 text-xl font-light md:text-left text-center"
           variants={rise}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
@@ -112,22 +117,24 @@ const Footer = () => {
           Get in Touch
         </motion.div>
         <motion.div
-          className="flex flex-col text-white font-light tracking-wider"
+          className="flex flex-col text-white font-light tracking-wider md:text-left text-center" 
           variants={rise2}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
         >
           <div className="my-2 mr-2">123, ABC Street</div>
           <div className="my-2 mr-2">Lucknow, UP</div>
-          <div className="my-2 mr-2 flex items-center">
+          <div className="my-2 mr-2 flex items-center justify-center md:justify-start ">
             <IoCall /> &nbsp; 12303562
           </div>
-          <div className="my-2 mr-2 flex items-center">
+          <div className="my-2 mr-2 flex items-center justify-center md:justify-start">
             <MdMail size={20} /> &nbsp; school@gmail.com
           </div>
         </motion.div>
       </div>
     </div>
+    <div className="text-center font-light text-[12px] md:text-sm my-1 tracking-wider">&copy; 2025 by School Academy Powered by WeTe Solutions.</div>
+    </>
   );
 };
 
